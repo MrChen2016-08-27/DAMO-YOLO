@@ -37,7 +37,8 @@ class Config(MyConfig):
         self.train.augment.mosaic_mixup.shear = 0.2
         self.train.augment.mosaic_mixup.mosaic_scale = (0.1, 2.0)
         self.train.augment.mosaic_mixup.keep_ratio = False
-        self.train.finetune_path='path/to/damoyolo_tinynasL20_T.pth'
+        # 下载 官方github 下的 DAMO-YOLO-Nm .pth模型到 /content/damoyolo_nano_middle.pth
+        self.train.finetune_path='/content/damoyolo_nano_middle.pth'
         self.dataset.train_ann = ('sample_coco_train', )
         self.dataset.val_ann = ('sample_coco_val', )
 
