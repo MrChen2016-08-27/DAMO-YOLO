@@ -14,8 +14,8 @@ class Config(MyConfig):
         self.miscs.eval_interval_epochs = 10
         self.miscs.ckpt_interval_epochs = 10
         # optimizer
-        # 防止训练显出超出，从 256 减少到 64批次
-        self.train.batch_size = 64
+        # 防止训练显出超出，从 256 减少到 32 批次
+        self.train.batch_size = 32
         self.train.base_lr_per_img = 0.001 / 64
         self.train.min_lr_ratio = 0.05
         self.train.no_aug_epochs = 16
