@@ -29,9 +29,10 @@ class Config(MyConfig):
         self.train.augment.mosaic_mixup.translate = 0.2
         self.train.augment.mosaic_mixup.shear = 0.2
         self.train.augment.mosaic_mixup.mosaic_scale = (0.1, 2.0)
-
-        self.dataset.train_ann = ('coco_2017_train', )
-        self.dataset.val_ann = ('coco_2017_val', )
+        # 下载 官方github 下的 damoyolo_tinynasL20_T.pt 模型到 /content/damoyolo_tinynasL20_T.pt
+        self.train.finetune_path='/content/damoyolo_tinynasL20_T.pt'
+        self.dataset.train_ann = ('sample_coco_train', )
+        self.dataset.val_ann = ('sample_coco_val', )
 
         # backbone
         structure = self.read_structure(
