@@ -64,7 +64,7 @@ class Config(MyConfig):
 
         ZeroHead = {
             'name': 'ZeroHead',
-            'num_classes': 80,
+            'num_classes': 2,
             'in_channels': [64, 128, 256],
             'stacked_convs': 0,
             'reg_max': 16,
